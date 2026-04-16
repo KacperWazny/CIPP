@@ -52,7 +52,7 @@
     },
     {
       "route": "*",
-      "allowedRoles": ["admin", "editor", "readonly", "authenticated"]
+      "allowedRoles": ["admin", "editor", "readonly", "authenticated", "anonymous"]
     }
   ],
   "navigationFallback": {
@@ -68,14 +68,13 @@
       "manifest.json"
     ]
   },
- "responseOverrides": {
-  "403": {
-    "rewrite": "/403"
-  },
-  "404": {
-    "rewrite": "/404"
-  }
-}
+  "responseOverrides": {
+    "403": {
+      "rewrite": "/403"
+    },
+    "404": {
+      "rewrite": "/404"
+    }
   },
   "globalHeaders": {
     "content-security-policy": "default-src https: blob: 'unsafe-eval' 'unsafe-inline'; object-src 'self' blob:; img-src 'self' blob: data: *"
